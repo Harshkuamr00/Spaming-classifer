@@ -11,3 +11,4 @@ if st.button("Predict"):
     user_input_vec = vectorizer.transform([user_input])
     pred = model.predict(user_input_vec)[0]
     st.write("Prediction:", "🚫 Spam" if pred == 1 else "✅ Not Spam")
+    st.write(f"Model confidence: {pred:.2%}")
